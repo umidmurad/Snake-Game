@@ -1,0 +1,97 @@
+html,body {
+    background-image: linear-gradient(aqua, white);
+
+    margin: auto;
+    color:  black;
+    font-family: Optima, serif;
+    font-size: 1.1em;
+   
+}
+
+
+div {
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    margin: auto;
+    font-family: Optima, serif;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+
+
+/*buttons */
+
+a:link {
+    color:	#8c7a66;
+}
+
+a:visited {
+    color:	#8c7a66;
+}
+
+a:hover {
+    color: 	#8c7a66;
+}
+
+a:active {
+    color: 	#8c7a66;
+}
+
+.level {
+ 
+  transition-duration: 0.4s;
+}
+
+.level:hover {
+  background-color: lime ; /* Green */
+  color: white;
+}
+.level2 {
+ 
+  transition-duration: 0.4s;
+}
+
+.level2:hover {
+  background-color: orange ; /* Orange */
+  color: white;
+}
+.level3 {
+ 
+  transition-duration: 0.4s;
+}
+
+.level3:hover {
+  background-color: red ; /* Red */
+  color: white;
+}
+/* hidden buttons */
+.hidden{
+   visibility:hidden;
+}
+
+.hidden1{
+
+	visibility:hidden;
+	transition-duration: 0.4s;
+
+}
+.hidden1:hover{
+	background-color: blue ; /* blue */
+  color: white;
+}
+/* rows & columns */
+
+.row {
+	display: flex;
+}
+
+.column {
+	
+	flex:33.33%;
+}
