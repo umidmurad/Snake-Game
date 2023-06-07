@@ -51,8 +51,10 @@ var appleX = (appleY = 15);
 // draw
 function draw() {
   // move snake in next pos
-  snakeX += nextX;
-  snakeY += nextY;
+  if (gameInProgress) {
+    snakeX += nextX;
+    snakeY += nextY;
+  }
 
   // snake over game world?
   if (snakeX < -1 || snakeY < -1 || snakeX > gridSize || snakeY > gridSize) {
@@ -72,7 +74,7 @@ function draw() {
   }
 
   //paint background
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "lightgray";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // paint snake
@@ -92,7 +94,7 @@ function draw() {
   }
 
   // paint apple
-  ctx.fillStyle = "red";
+  ctx.fillStyle = "green";
   ctx.fillRect(appleX * tileSize, appleY * tileSize, tileSize, tileSize);
 
   //set snake trail
@@ -102,11 +104,8 @@ function draw() {
   }
   //if tail size reachs to 8, automatic win, skipping to next level.
   if (tailSize == 8) {
-    document.getElementById("p4").style.visibility = "visible";
-    document.getElementById("p3").style.visibility = "visible";
+    document.getElementById("p2").style.visibility = "visible";
     gameInProgress = false;
-    setTimeout(function () {
-      window.location.href = "snake3.html";
-    }, 5000);
+    return;
   }
 }

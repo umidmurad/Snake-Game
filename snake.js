@@ -5,7 +5,6 @@ window.onload = function () {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   document.addEventListener("keydown", keyDownEvent);
-  // render X times per second
   var x = 8;
   setInterval(draw, 1000 / x);
 };
@@ -51,8 +50,10 @@ var appleX = (appleY = 15);
 // draw
 function draw() {
   // move snake in next pos
-  snakeX += nextX;
-  snakeY += nextY;
+  if (gameInProgress) {
+    snakeX += nextX;
+    snakeY += nextY;
+  }
 
   // snake over game world?
   if (snakeX < 0) {
@@ -77,7 +78,7 @@ function draw() {
   }
 
   //paint background
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "lightgray";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // paint snake
@@ -97,7 +98,7 @@ function draw() {
   }
 
   // paint apple
-  ctx.fillStyle = "red";
+  ctx.fillStyle = "green";
   ctx.fillRect(appleX * tileSize, appleY * tileSize, tileSize, tileSize);
 
   //set snake trail
@@ -106,13 +107,9 @@ function draw() {
     snakeTrail.shift();
   }
   //if tail size reachs to 13, automatic win, skipping to next level.
-  if (tailSize == 13) {
+  if (tailSize == 5) {
     document.getElementById("p1").style.visibility = "visible";
-    document.getElementById("p2").style.visibility = "visible";
     gameInProgress = false;
-
-    setTimeout(function () {
-      window.location.href = "snake2.html";
-    }, 5000);
+    return;
   }
 }

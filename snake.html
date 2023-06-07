@@ -1,73 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="snake.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="mainstyle.css">
+    <link rel="stylesheet" href="mainstyle.css" />
     <title>Snake Game</title>
   </head>
   <body>
-  <center>
-    <h1>Welcome to the Snake Game </h1> 
-    <br>
-    <button class='main'><a href="index.html">Main Menu </a> </button> 
-    <br>
-    <br>
+    <div class="center">
+      <h1>Welcome to the Snake Game</h1>
+      <br />
+      <button class="button"><a href="index.html">Main Menu </a></button>
+      <br />
+      <br />
 
-    
-
-  <hr>
-  </center>
-
-
-  <div>
-    <div class="row">
-        <div class="column">
-            <div class="game">
-              <h3>Level Selected: Easy</h3>
-              <p>You can move the snake by using arrow keys on the keyboard.<br>Easy level allows snake to pass through walls. If snakes contacts it's own tail, game will restart. Eat up to 10 apples to finish Easy level! <br>If you pass this level, try your chances on Average. <b> Good Luck!</b> <br></p>
-
-            </div>
-        </div>
-
-
-
-        <div class="column">
-            <div class="game">
-                <canvas id="canvas" width="400" height="400"></canvas>
-            </div>
-        </div>
-
-        <div class="column">
-            <div class="game">
-               <button class='level'><a href="snake.html">Easy </a> </button> 
-               <br>
-               <button class='level2'><a href="snake2.html">Average </a> </button> 
-               <br>
-               <button class='level3'><a href="snake3.html">Impossible </a> </button> 
-            </div>
-        </div>
-
-
+      <hr />
     </div>
-  </div>
-<br>
-<hr>
- <!-- <center><button  id="p2" class='hidden'><a href="snake2.html"> Next Level </a></button></center> -->
 
-  <!-- hidden button --> 
-  <center>
-    <a href="snake2.html">
-    <input type="submit" class="hidden" id="p2" value="Next Level">
-  </a>
+    <div>
+      <div class="row">
+        <div class="column">
+          <div class="game">
+            <h3>Level Selected: Easy</h3>
+            <p>
+              You can move the snake by using arrow keys on the keyboard.<br />Easy
+              level allows snake to pass through walls. If snakes contacts it's
+              own tail, game will restart. Eat up to 10 apples to finish Easy
+              level! <br />If you pass this level, try your chances on Average.
+              <b> Good Luck!</b> <br />
+            </p>
+          </div>
+        </div>
 
-    <p class="hidden" id="p1">You Won! Switching to Average Level in 5 seconds... Or Just click the button!</p>
-  </center>
-   
+        <div class="column">
+          <div class="game">
+            <canvas id="canvas" width="400" height="400"></canvas>
+          </div>
+        </div>
 
-   
-
+        <div class="column">
+          <div class="game">
+            <button class="level"><a href="snake.html">Easy </a></button>
+            <br />
+            <button class="level2"><a href="snake2.html">Average </a></button>
+            <br />
+            <button class="level3">
+              <a href="snake3.html">Impossible </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <!-- hidden button -->
+    <div class="center">
+      <p class="hidden" id="p1">
+        Congratulations! You have passed the Easy level. <br />
+      </p>
+    </div>
   </body>
 </html>

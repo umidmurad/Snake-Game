@@ -1,97 +1,132 @@
-html,body {
-    background-image: linear-gradient(aqua, white);
-
-    margin: auto;
-    color:  black;
-    font-family: Optima, serif;
-    font-size: 1.1em;
-   
+html,
+body {
+  background-color: black;
+  margin: auto;
+  color: white;
+  font-family: Optima, serif;
+  font-size: 1.1em;
+  overflow: hidden;
 }
 
-
 div {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
 }
 
 p {
-    margin: auto;
-    font-family: Optima, serif;
-    text-align: center;
-    padding: 30px;
+  margin: auto;
+  font-family: Optima, serif;
+  text-align: center;
+  padding: 30px;
 }
-
-
-
-
 
 /*buttons */
 
 a:link {
-    color:	#8c7a66;
+  color: white;
+  /* text-decoration: none; */
+  font-size: large;
+  text-decoration: underline;
 }
 
 a:visited {
-    color:	#8c7a66;
+  color: white;
 }
 
 a:hover {
-    color: 	#8c7a66;
-}
-
-a:active {
-    color: 	#8c7a66;
+  color: white;
+  font-size: x-large;
 }
 
 .level {
- 
   transition-duration: 0.4s;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .level:hover {
-  background-color: lime ; /* Green */
+  background-color: lime; /* Green */
   color: white;
 }
 .level2 {
- 
   transition-duration: 0.4s;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .level2:hover {
-  background-color: orange ; /* Orange */
+  background-color: orange; /* Orange */
   color: white;
 }
 .level3 {
- 
   transition-duration: 0.4s;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .level3:hover {
-  background-color: red ; /* Red */
+  background-color: blue; /* Blue */
   color: white;
 }
 /* hidden buttons */
-.hidden{
-   visibility:hidden;
+.hidden {
+  visibility: hidden;
+  color: red;
 }
 
-.hidden1{
-
-	visibility:hidden;
-	transition-duration: 0.4s;
-
+.hidden1 {
+  visibility: hidden;
+  transition-duration: 0.4s;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
-.hidden1:hover{
-	background-color: blue ; /* blue */
+.hidden1:hover {
+  background-color: red; /* blue */
   color: white;
 }
-/* rows & columns */
 
+/* rows & columns */
 .row {
-	display: flex;
+  display: flex;
 }
 
 .column {
-	
-	flex:33.33%;
+  flex: 33.33%;
+}
+
+/* centering things */
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
 }
