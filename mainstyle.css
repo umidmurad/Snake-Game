@@ -94,6 +94,22 @@ a:hover {
   background-color: blue; /* Blue */
   color: white;
 }
+
+.level4 {
+  transition-duration: 0.4s;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000000;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.level4:hover {
+  background-color: rgb(157, 6, 149); /* Blue */
+  color: white;
+}
 /* hidden buttons */
 .hidden {
   visibility: hidden;
