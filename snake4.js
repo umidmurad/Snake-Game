@@ -6,7 +6,7 @@ window.onload = function () {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   document.addEventListener("keydown", keyDownEvent);
-  var x = 25; //speed has increased
+  var x = 35; //speed has increased
   gameInterval = setInterval(draw, 1000 / x);
 };
 // movements of snake, up, bot, right,left arrow keys
