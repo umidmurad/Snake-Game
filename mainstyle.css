@@ -5,10 +5,10 @@ body {
   color: white;
   font-family: Optima, serif;
   font-size: 1.1em;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-body {
+/* body {
   overflow-y: auto;
 }
 
@@ -16,7 +16,7 @@ body {
   body {
     overflow-y: scroll;
   }
-}
+} */
 
 div {
   margin: auto;

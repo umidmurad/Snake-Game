@@ -1,5 +1,6 @@
 var canvas, ctx;
 var gameInProgress = true;
+var gameInterval;
 
 window.onload = function () {
   canvas = document.getElementById("canvas");
@@ -7,7 +8,7 @@ window.onload = function () {
   document.addEventListener("keydown", keyDownEvent);
   // render X times per second
   var x = 8;
-  setInterval(draw, 1000 / x);
+  gameInterval = setInterval(draw, 1000 / x);
 };
 // movements of snake, up, bot, right,left arrow keys
 function keyDownEvent(e) {

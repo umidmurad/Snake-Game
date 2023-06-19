@@ -1,12 +1,12 @@
 var canvas, ctx;
 var gameInProgress = true;
-
+var gameInterval;
 window.onload = function () {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   document.addEventListener("keydown", keyDownEvent);
   var x = 8;
-  setInterval(draw, 1000 / x);
+  gameInterval = setInterval(draw, 1000 / x);
 };
 
 function keyDownEvent(e) {

@@ -1,19 +1,19 @@
 var canvas, ctx;
 var gameInProgress = true;
+var gameInterval;
 
 window.onload = function () {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   document.addEventListener("keydown", keyDownEvent);
   var x = 25; //speed has increased
-  setInterval(draw, 1000 / x);
+  gameInterval = setInterval(draw, 1000 / x);
 };
 // movements of snake, up, bot, right,left arrow keys
 function keyDownEvent(e) {
   if (!gameInProgress) {
     return; // Ignore keydown events when the game is over
   }
-
   switch (e.keyCode) {
     case 37:
       nextX = -1;
@@ -57,12 +57,16 @@ function draw() {
   }
 
   // snake over game world?
-  if (snakeX < -1 || snakeY < -1 || snakeX > gridSize || snakeY > gridSize) {
+  if (
+    snakeX < 0 ||
+    snakeY < 0 ||
+    snakeX > gridSize - 1 ||
+    snakeY > gridSize - 1
+  ) {
+    gameInProgress = false;
+    clearInterval(gameInterval);
     document.getElementById("p5").style.visibility = "visible";
     document.getElementById("p6").style.visibility = "visible";
-    //Stops control of the game
-    gameInProgress = false;
-    return;
   }
 
   //snake bite apple?
