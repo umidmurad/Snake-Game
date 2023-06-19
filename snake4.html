@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="snake.js" charset="utf-8"></script>
+    <script src="snake4.js" charset="utf-8"></script>
     <link rel="stylesheet" href="mainstyle.css" />
     <title>Snake Game</title>
   </head>
@@ -23,13 +23,15 @@
       <div class="row">
         <div class="column">
           <div class="game">
-            <h3>Level Selected: Easy</h3>
+            <h3>Level Selected: Bonus</h3>
+            <h6></h6>
             <p>
-              Use the arrow keys on your keyboard to navigate the snake. In the
-              Easy level, the snake can pass through walls. Watch out for
-              collisions with its own tail, as it will restart the game. Consume
-              10 apples to complete the Easy level. <br />If you succeed, try
-              your hand at the Average level.<br /><b> Good Luck!</b> <br />
+              Control the snake's movement using the arrow keys on your
+              keyboard. Bonus level blocks snake from passing through walls.
+              Trick is that you cant see the walls! If snakes contacts it's own
+              tail, game will restart. Snake's speed has been increased to
+              ridicilous level. Eat up to 5 apples to finish Bonus level! <br />
+              <b> Good Luck!</b> <br />
             </p>
           </div>
         </div>
@@ -56,27 +58,21 @@
             <br />
             <br />
 
-            <a href="#">
-              <input
-                type="submit"
-                class="hidden1"
-                id="p5"
-                value="You will never see this button"
-              />
+            <a href="snake4.html">
+              <input type="submit" class="hidden1" id="p5" value="Try Again" />
             </a>
             <p class="hidden" style="color: red" id="p6">
-              You will never see this!
+              Good try! Better Luck Next Time!
             </p>
           </div>
         </div>
       </div>
     </div>
     <hr />
+
     <!-- hidden button -->
     <div class="center">
-      <p class="hidden" id="p1">
-        Congratulations! You have passed the Easy level. <br />
-      </p>
+      <p class="hidden" id="p4">You Won! You are a Champion!</p>
     </div>
   </body>
 </html>

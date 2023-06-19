@@ -1,19 +1,19 @@
 var canvas, ctx;
 var gameInProgress = true;
 var gameInterval;
+
 window.onload = function () {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
   document.addEventListener("keydown", keyDownEvent);
-  var x = 8;
+  var x = 35; //speed has increased
   gameInterval = setInterval(draw, 1000 / x);
 };
-
+// movements of snake, up, bot, right,left arrow keys
 function keyDownEvent(e) {
   if (!gameInProgress) {
     return; // Ignore keydown events when the game is over
   }
-
   switch (e.keyCode) {
     case 37:
       nextX = -1;
@@ -42,6 +42,7 @@ var snakeX = (snakeY = 10);
 
 // game world
 var gridSize = (tileSize = 20); // 20 x 20 = 400
+
 var nextX = (nextY = 0);
 
 // apple
@@ -56,17 +57,16 @@ function draw() {
   }
 
   // snake over game world?
-  if (snakeX < 0) {
-    snakeX = gridSize - 1;
-  }
-  if (snakeX > gridSize - 1) {
-    snakeX = 0;
-  }
-  if (snakeY < 0) {
-    snakeY = gridSize - 1;
-  }
-  if (snakeY > gridSize - 1) {
-    snakeY = 0;
+  if (
+    snakeX < 0 ||
+    snakeY < 0 ||
+    snakeX > gridSize - 1 ||
+    snakeY > gridSize - 1
+  ) {
+    gameInProgress = false;
+    clearInterval(gameInterval);
+    document.getElementById("p5").style.visibility = "visible";
+    document.getElementById("p6").style.visibility = "visible";
   }
 
   //snake bite apple?
@@ -78,11 +78,11 @@ function draw() {
   }
 
   //paint background
-  ctx.fillStyle = "lightgray";
+  ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // paint snake
-  ctx.fillStyle = "lime";
+  ctx.fillStyle = "red";
   for (var i = 0; i < snakeTrail.length; i++) {
     ctx.fillRect(
       snakeTrail[i].x * tileSize,
@@ -106,10 +106,10 @@ function draw() {
   while (snakeTrail.length > tailSize) {
     snakeTrail.shift();
   }
-  //if tail size reachs to 13, automatic win, skipping to next level.
-  if (tailSize == 13) {
-    document.getElementById("p1").style.visibility = "visible";
+  //if tail size reachs to 8, automatic win, skipping to next level.
+  if (tailSize == 8) {
+    document.getElementById("p3").style.visibility = "visible";
     gameInProgress = false;
-    return;
+    return true;
   }
 }

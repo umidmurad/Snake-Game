@@ -5,10 +5,10 @@ body {
   color: white;
   font-family: Optima, serif;
   font-size: 1.1em;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-body {
+/* body {
   overflow-y: auto;
 }
 
@@ -16,7 +16,7 @@ body {
   body {
     overflow-y: scroll;
   }
-}
+} */
 
 div {
   margin: auto;
@@ -44,56 +44,141 @@ a:visited {
   color: white;
 }
 
-a:hover {
-  color: white;
-  font-size: x-large;
+.button {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid white;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 0 red;
+}
+
+.button:hover {
+  color: red;
+  box-shadow: inset 0 -100px 0 0 red;
+}
+
+.button:active {
+  transform: scale(0.9);
 }
 
 .level {
-  transition-duration: 0.4s;
+  position: relative;
   display: inline-block;
+  margin: 5px;
   padding: 10px 20px;
-  border-radius: 50px;
-  background-color: #000000;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
   text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
+  color: lime;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid lime;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 0 lime;
 }
 
 .level:hover {
-  background-color: lime; /* Green */
   color: white;
+  box-shadow: inset 0 -100px 0 0 lime;
 }
+
+.level:active {
+  transform: scale(0.9);
+}
+
 .level2 {
-  transition-duration: 0.4s;
+  position: relative;
   display: inline-block;
+  margin: 5px;
   padding: 10px 20px;
-  border-radius: 50px;
-  background-color: #000000;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
   text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
+  color: orange;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid orange;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 0 orange;
 }
 
 .level2:hover {
-  background-color: orange; /* Orange */
   color: white;
+  box-shadow: inset 0 -100px 0 0 orange;
 }
+
+.level2:active {
+  transform: scale(0.9);
+}
+
 .level3 {
-  transition-duration: 0.4s;
+  position: relative;
   display: inline-block;
+  margin: 5px;
   padding: 10px 20px;
-  border-radius: 50px;
-  background-color: #000000;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
   text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
+  color: blue;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid blue;
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 0 blue;
 }
 
 .level3:hover {
-  background-color: blue; /* Blue */
   color: white;
+  box-shadow: inset 0 -100px 0 0 blue;
 }
+
+.level3:active {
+  transform: scale(0.9);
+}
+
+.level4 {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: rgb(157, 6, 149);
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid rgb(157, 6, 149);
+  border-radius: 50px;
+  box-shadow: inset 0 0 0 0 rgb(157, 6, 149);
+}
+
+.level4:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 rgb(157, 6, 149);
+}
+
+.level4:active {
+  transform: scale(0.9);
+}
+
 /* hidden buttons */
 .hidden {
   visibility: hidden;
@@ -129,14 +214,4 @@ a:hover {
 .center {
   text-align: center;
   margin: auto;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 50px;
-  background-color: #000000;
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
 }
