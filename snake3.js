@@ -64,11 +64,10 @@ function draw() {
     snakeX > gridSize - 1 ||
     snakeY > gridSize - 1
   ) {
+    gameInProgress = false;
+    clearInterval(gameInterval);
     document.getElementById("p5").style.visibility = "visible";
     document.getElementById("p6").style.visibility = "visible";
-    //Stops control of the game
-    gameInProgress = false;
-    return;
   }
 
   //snake bite apple?

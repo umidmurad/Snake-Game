@@ -11,67 +11,61 @@
   <body>
     <div class="center">
       <h1>Welcome to the Snake Game</h1>
-      <br />
       <button class="button"><a href="index.html">Main Menu </a></button>
-      <br />
-      <br />
-
       <hr />
     </div>
 
-    <div>
-      <div class="row">
-        <div class="column">
-          <div class="game">
-            <h3>Level Selected: Average</h3>
-            <p>
-              You can control the snake's movement by using the arrow keys on
-              your keyboard. In the Average level, the snake is prevented from
-              passing through walls. Be cautious of collisions with its own
-              tail, as they will trigger a game restart. Consume up to 5 apples
-              to successfully finish the Average level.<br />If you succeed, try
-              your hand at the Impossible level. <br />
-              <b> Good Luck!</b> <br />
-            </p>
-          </div>
+    <div class="row">
+      <div class="column">
+        <div class="game">
+          <h3>Level Selected: Average</h3>
+          <p>
+            You can control the snake's movement by using the arrow keys on your
+            keyboard. In the Average level, the snake is prevented from passing
+            through walls. Be cautious of collisions with its own tail, as they
+            will trigger a game restart. Consume up to 5 apples to successfully
+            finish the Average level.<br />If you succeed, try your hand at the
+            Impossible level. <br />
+            <b> Good Luck!</b> <br />
+          </p>
         </div>
+      </div>
 
-        <div class="column">
-          <div class="game">
-            <canvas
-              id="canvas"
-              width="400"
-              height="400"
-              style="border: 5px solid red"
-            >
-            </canvas>
-          </div>
+      <div class="column">
+        <div class="game">
+          <canvas
+            id="canvas"
+            width="400"
+            height="400"
+            style="border: 5px solid red"
+          >
+          </canvas>
         </div>
+      </div>
 
-        <div class="column">
-          <div class="game">
-            <button class="level"><a href="snake.html">Easy </a></button>
-            <br />
-            <button class="level2"><a href="snake2.html">Average </a></button>
-            <br />
-            <button class="level3">
-              <a href="snake3.html">Impossible </a>
-            </button>
-            <br />
-            <button class="level4">
-              <a href="snake4.html">Bonus </a>
-            </button>
-            <br />
-            <br />
+      <div class="column">
+        <div class="game">
+          <button class="level"><a href="snake.html">Easy </a></button>
+          <br />
+          <button class="level2"><a href="snake2.html">Average </a></button>
+          <br />
+          <button class="level3">
+            <a href="snake3.html">Impossible </a>
+          </button>
+          <br />
+          <button class="level4">
+            <a href="snake4.html">Bonus </a>
+          </button>
+          <br />
+          <br />
 
-            <a href="snake2.html">
-              <input type="submit" class="hidden1" id="p5" value="Try Again" />
-            </a>
-            <p class="hidden" style="color: red" id="p6">
-              Good try! Better Luck Next Time!
-            </p>
-            <p class="hidden" id="p2">You Won the Average Level!</p>
-          </div>
+          <a href="snake2.html">
+            <input type="submit" class="hidden1" id="p5" value="Try Again" />
+          </a>
+          <p class="hidden" style="color: red" id="p6">
+            Good try! Better Luck Next Time!
+          </p>
+          <p class="hidden" id="p2">You Won the Average Level!</p>
         </div>
       </div>
     </div>
