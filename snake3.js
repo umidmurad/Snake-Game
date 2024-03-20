@@ -108,9 +108,9 @@ function draw() {
     snakeTrail.shift();
   }
   //if tail size reachs to 8, automatic win, skipping to next level.
-  if (tailSize == 8) {
-    document.getElementById("p3").style.visibility = "visible";
+  if (tailSize == 13) {
+    document.getElementById("p4").style.visibility = "visible";
     gameInProgress = false;
-    return true;
+    return;
   }
 }
